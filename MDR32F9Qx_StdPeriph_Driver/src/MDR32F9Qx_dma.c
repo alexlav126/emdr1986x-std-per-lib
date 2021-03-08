@@ -80,8 +80,6 @@
   * @{
   */
 
-void DMA_CtrlDataInit(DMA_CtrlDataInitTypeDef *DMA_ctrl_data_ptr, DMA_CtrlDataTypeDef *DMA_ctrl_table_ptr);
-
 /** @} */ /* End of group DMA_Private_FunctionPrototypes */
 
 /** @defgroup DMA_Private_Functions DMA Private Functions
