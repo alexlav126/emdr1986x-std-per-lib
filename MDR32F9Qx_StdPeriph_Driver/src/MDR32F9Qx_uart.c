@@ -168,6 +168,7 @@ BaudRateStatus UART_Init ( MDR_UART_TypeDef* UARTx,
 	/* Set PEN, EPS and SPS bits according to UART_Parity value */
 	/* Set FEN bit according to UART_FIFOMode value */
 	tmpreg = UARTx->LCR_H;
+	tmpreg &= ~((uint32_t)0xfe); // clear for correct set
 	tmpreg |= UART_InitStruct->UART_WordLength | UART_InitStruct->UART_StopBits
 			| UART_InitStruct->UART_Parity | UART_InitStruct->UART_FIFOMode;
 	UARTx->LCR_H = tmpreg;
